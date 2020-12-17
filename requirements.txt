@@ -1,0 +1,13 @@
+Flask
+Flask-Restful
+Flask-Jwt
+python-dateutil
+python-dotenv
+SQLAlchemy
+SQLAlchemy-Utils
+python-dateutil==2.8.1
+six
+SQLAlchemy
+SQLAlchemy-Utils
+logicbank
+logicbankutils
