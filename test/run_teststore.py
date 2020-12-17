@@ -1,6 +1,7 @@
 from logic_bank.util import ConstraintException
 #  just run as main
 
+
 def read_all_stores():
     result = {'items': list(map(lambda s: s.json(), models.StoreModel.query.all()))}
     print(result)
@@ -78,7 +79,7 @@ if __name__ == "__main__":
     # noinspection PyUnresolvedReferences
     import logic
 
-#    add_item_no_parent()
+    add_item_no_parent()
     add_item_nonexisting_parent()
 #
     read_all_stores()

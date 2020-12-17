@@ -1,4 +1,6 @@
-Use RI Branch for executing Rules
+Use RI Branch for executing Parent Check Rules
+
+copy env.example to .env and change to your environment
 
 run test/run_teststore.py for plain sqlalchemy calls with LogicBank
 
