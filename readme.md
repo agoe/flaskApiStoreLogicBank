@@ -25,15 +25,15 @@ Rules in logix/rules_bank.py:
 some rest calls:
 
 create store
-post http://localhost:5000/store/<storename>
+post http://localhost:5000/store/\<storename\>
 json body {}
 
 delete store
-delete  http://localhost:5000/store/<storename>
+delete  http://localhost:5000/store/\<storename\>
 
 list stores
 get http://localhost:5000/stores
 
 update item
-put http://localhost:5000/item/<itemname>
+put http://localhost:5000/item/\<itemname\>
 json body{"price": 8.89, "store_id": 9999}
