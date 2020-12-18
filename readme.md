@@ -8,10 +8,11 @@ test/test_model.py  unit tests plain sqlalchemy calls with LogicBank
 
 test/test_model_flask.py unittest for flask and LogicBank rules via flask_client
 
+test/test_model_flask_remote.py integration test for Remote flask and LogicBank rules 
+    via Python Requests Api (Requires running wsgiapp Flask Api Server)
+
 
 Start Flask api Server With Logic Rules via wsgiapp.py
-
-
 
 
 Rules in logix/rules_bank.py:

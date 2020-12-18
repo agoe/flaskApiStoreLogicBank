@@ -7,7 +7,6 @@ SQLAlchemy
 SQLAlchemy-Utils
 python-dateutil==2.8.1
 six
+requests
 SQLAlchemy
 SQLAlchemy-Utils
-logicbank
-logicbankutils
