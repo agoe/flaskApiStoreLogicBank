@@ -15,7 +15,7 @@ class ItemModel(Base):
     #  store = relationship('StoreModel')
     store = relationship("StoreModel", back_populates="items")
 
-    def __init__(self, name, price, store_id):
+    def __init__(self, name = None, price = None, store_id = None):
         self.name = name
         self.price = price
         self.store_id = store_id
