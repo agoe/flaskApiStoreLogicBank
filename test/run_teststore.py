@@ -1,4 +1,5 @@
 from logic_bank.util import ConstraintException
+import utility as util
 #  just run as main
 
 
@@ -71,8 +72,10 @@ def add_store_and_item_and_delete_again_store_first():
         print("expected exception: {} ".format(e))
         session = db.Session()
         session.rollback()
-    else:
-        print("Missing Constraint exception: 'Delete rejected - items has rows'")
+    except Exception:
+        session = db.Session()
+        session.rollback()
+        util.log("Missing Constraint exception: 'Delete rejected - items has rows'")
     finally:
         count_items_for_store(store.id)
         item1.delete_from_db()
@@ -106,8 +109,9 @@ if __name__ == "__main__":
     # noinspection PyUnresolvedReferences
     import logic
 
+  #  add_item_no_parent()  # currently throws exceptions
     add_store_and_item_and_delete_again_store_first()
-#    add_item_no_parent() currently throws exceptions
+
     add_item_non_existing_parent()
 
     read_all_stores()

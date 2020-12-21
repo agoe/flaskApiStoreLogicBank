@@ -14,7 +14,7 @@ from config import Config
 
 SQLALCHEMY_DATABASE_URI = Config.SQLALCHEMY_DATABASE_URI
 util.log("Create Engine Uri: "+SQLALCHEMY_DATABASE_URI)
-engine = create_engine(SQLALCHEMY_DATABASE_URI)
+engine = create_engine(SQLALCHEMY_DATABASE_URI, echo="debug")
 
 Session: scoped_session = scoped_session(sessionmaker(bind=engine))
 Base: declarative_base = declarative_base()

@@ -66,6 +66,11 @@ class TestModel(unittest.TestCase):
             session = db.Session()
             session.rollback()
             result = e
+        except Exception as e:
+            print("unexcpected expected exception: {} ".format(e))
+            session = db.Session()
+            session.rollback()
+            result = e
         else:
             print("Missing Constraint exception: 'Delete rejected - items has rows'")
         finally:
